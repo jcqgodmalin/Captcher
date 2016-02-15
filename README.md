@@ -1,13 +1,14 @@
 # Captcher
 Simple Captcha Generator and Validator
 
-##What does it do
+#What does it do
 Incase you need a simple Captcha Generator, You can use Captcher. Captcher will check if the code entered match or generate a new one if it doesn't.
 
-##Sample
+#Sample
 See the sample [Here](https://rawgit.com/Lezirhc/Captcher/master/Sample/sample.html).
 
-##How to use
+#How to use
+##Embedding the project:
 1. Simply embed the Captcher source file in your html page.
 
     ```html  
@@ -32,5 +33,5 @@ To generate a new code, Simply call the ```run()``` function.
 ##Modify code length
 To modify the number of characters of the captcha code, simply edit the value of the variable ```c_myCodeLength``` to the length you want. The default is 6.
 
-##Note:
+#Note:
 This is just purely javascript made as this is a project in one of my subjects in school. Will use jQuery next time.
