@@ -20,7 +20,7 @@ Captcha Generator and Validator
       ```
 
 # Modify code length:
-    To modify the number of characters of the captcha code, simply edit the value of the variable ```c_myCodeLength``` to the length you want. The default is 6.
+To modify the number of characters of the captcha code, simply edit the value of the variable ```c_myCodeLength``` to the length you want. The default is 6.
 
 # Note:
 This is just purely javascript made as this is a project in one of my subjects in school. jQuery will be used next time.
