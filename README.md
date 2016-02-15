@@ -1,10 +1,7 @@
 # Captcher
 Captcha Generator and Validator
 
-#Note:
-This is just purely javascript made as this is a project in one of my subjects in school. jQuery will be used next time.
-
-#How to use
+# How to use
 1. Simply embed the Captcher source file in your html page.
 
     ```html  
@@ -21,3 +18,9 @@ This is just purely javascript made as this is a project in one of my subjects i
         <button onclick='validate()'>Submit</button>
         <p id='result-label'></p>
       ```
+
+# Modify code length:
+To modify the number of characters of the captcha code, simply edit the value of the variable ```c_myCodeLength``` to the length you want. The default is 6.
+
+# Note:
+This is just purely javascript made as this is a project in one of my subjects in school. jQuery will be used next time.
