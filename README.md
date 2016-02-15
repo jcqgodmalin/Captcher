@@ -35,3 +35,6 @@ To modify the number of characters of the captcha code, simply edit the value of
 
 #Note:
 This is just purely javascript made as this is a project in one of my subjects in school. Will use jQuery next time.
+
+#License
+This work is licensed under [GNU GPL v3.0](http://www.gnu.org/licenses/gpl-3.0.txt)
