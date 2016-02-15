@@ -33,7 +33,7 @@ function validate(){
     document.getElementById('result-label').innerHTML = "Must enter something"; //Show error message
   }else{ //If it doesn't match
     //Show error message.
-    document.getElementById('msg-admin').innerHTML = "Code doesn't match";
+    document.getElementById('result-label').innerHTML = "Code doesn't match";
     //Generate new code
     run();
   }
