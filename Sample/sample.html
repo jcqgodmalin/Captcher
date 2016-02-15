@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type='text/javascript' src='../Captcher.js'></script>
+    <title>Captcha</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+      *{
+        font-family: 'Segoe UI Light',sans-serif;
+      }
+      .captcha-box{
+        background-color: white;
+        width:30%;
+        height: 200px;
+        padding: 5px 10px;
+        margin: 0 auto;
+        border: 1px solid #e6e6e6;
+      }
+      #main{
+        font-size: 20px;
+      }
+      #tryanother{
+        text-align: center;
+        cursor: pointer;
+      }
+      input[type='text']{
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        float: right;
+        padding: 5px 3px;
+        text-align: center;
+      }
+      #ccode, #btnSubmit{
+        background-color: #404040;
+        padding: 10px 8px;
+        border-radius: 3px;
+        text-align:center;
+        color: white;
+      }
+      #code{
+        color:#66ff66;
+      }
+      #btnSubmit{
+        width: 50%;
+        float: right;
+        cursor: pointer;
+        border: none;
+      }
+      .admin-msg{
+        margin-top: 65px;
+        background-color: white;
+        height: 80px;
+        padding: 5px 10px;
+        border: 1px solid #e6e6e6;
+        display: none;
+      }
+      .footer{
+        margin-top: 100px;
+        text-align: center;
+      }
+      .footer a{
+        color: #404040;
+        text-decoration: none;
+      }
+    </style>
+    <script type='text/javascript' src='captcher.js'></script>
   </head>
   <body onload='run()'>
-    <p id='code'></p>
-    <input type='text' id='tbCode'>
-    <button onclick='validate()'>Submit</button>
-    <p id='result-label'></p>
+    <div class='captcha-box' id='captcha-box'>
+      <p id='ccode'>Code: <span id='code'></span><br/><span id='tryanother' onclick='run()'>Too Stupid, Give me another code.</span></p>
+      <p id='main'>Please enter the above code: <input type='text' id='tbCode'></p>
+      <button id='btnSubmit' onclick='validate()'>Submit</button>
+      <div class='admin-msg' id='admin-msg'>
+        <p id='result-label'></p>
+      </div>
+    </div>
+    <p class='footer'>Coded with &#9749; by <a href='http://www.twitter.com/thatsLezirhc' target='_blank'>@thatsLezirhc</a><br/>
+    See Captcher project at <a href='https://github.com/Lezirhc/Captcher' target='_blank'>Github</a></p>
+
   </body>
 </html>
