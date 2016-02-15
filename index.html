@@ -13,13 +13,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Captcher by Lezirhc</title>
+    <title>Captcher v2.0 by Lezirhc</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Captcher</h1>
+        <h1>Captcher v2.0</h1>
         <h2>Simple Captcha Generator and Validator</h2>
         <a href="https://github.com/Lezirhc/Captcher" class="button"><small>View project on</small> GitHub</a>
       </div>
@@ -29,6 +29,20 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
+<a id="captcher-is-now-version-2" class="anchor" href="#captcher-is-now-version-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Captcher is now Version 2!</h1>
+
+<h1>
+<a id="whats-new" class="anchor" href="#whats-new" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's New?</h1>
+
+<ol>
+<li>Coded with jQuery</li>
+<li>Enable/Disable "Try another Code"</li>
+<li>Enable/Disable Case-Sensitive feature.</li>
+<li>Interface</li>
+<li>Short Implementation</li>
+</ol>
+
+<h1>
 <a id="what-does-it-do" class="anchor" href="#what-does-it-do" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What does it do</h1>
 
 <p>Incase you need a simple Captcha Generator, You can use Captcher. Captcher will check if the code entered match or generate a new one if it doesn't.</p>
@@ -44,41 +58,44 @@
 <h2>
 <a id="embedding-the-project" class="anchor" href="#embedding-the-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Embedding the project:</h2>
 
-<ol>
-<li>
-<p>Simply embed the Captcher source file in your html page.</p>
+<h3>
+<a id="1-captcher-needs-jquery" class="anchor" href="#1-captcher-needs-jquery" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Captcher needs jQuery</h3>
+
+<p>Embed the jQuery library. See example below:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h3>
+<a id="2-captcher-needs-itself" class="anchor" href="#2-captcher-needs-itself" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Captcher needs itself</h3>
+
+<p>Embed the Captcher source file in your html page. See example below:</p>
 
 <div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">'</span>text/javascript<span class="pl-pds">'</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">'</span>path-to-Captcher-Source-File.js<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
-</li>
-<li>
-<p>Call the <code>run()</code> function on page load or anytime you want the Captcher to generate a code.</p>
 
-<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">body</span> <span class="pl-e">onload</span>=<span class="pl-s"><span class="pl-pds">'</span>run()<span class="pl-pds">'</span></span>&gt;</pre></div>
-</li>
-<li>
-<p>Create 2 labels or any sort that will hold the generated code by the Captcher and the result then give it an id named <code>code</code> &amp; <code>result-label</code>. Next, Make a textbox that has an id named <code>tbCode</code>. Lastly, Make a button that calls the <code>validate()</code> function in its <code>onClick=""</code> event.</p>
+<h3>
+<a id="3-captcher-needs-place" class="anchor" href="#3-captcher-needs-place" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Captcher needs place</h3>
 
-<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">p</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>code<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">p</span>&gt;
-    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>tbCode<span class="pl-pds">'</span></span>&gt;
-    &lt;<span class="pl-ent">button</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">'</span>validate()<span class="pl-pds">'</span></span>&gt;Submit&lt;/<span class="pl-ent">button</span>&gt;
-    &lt;<span class="pl-ent">p</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>result-label<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
-</li>
-</ol>
+<p>Add 2 <code>&lt;div&gt;</code>'s inside the <code>&lt;body&gt;</code> tag of your html page. Make it a <code>&lt;div&gt;</code> inside a <code>&lt;div&gt;</code>. Parent <code>&lt;div&gt;</code> must have the class of "captcher-box". The child <code>&lt;div&gt;</code> has the class of box. See example below:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">'</span>captcher-box<span class="pl-pds">'</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">'</span>box<span class="pl-pds">'</span></span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h2>
-<a id="generating-a-new-code-try-new-code-purposes" class="anchor" href="#generating-a-new-code-try-new-code-purposes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generating a new code ("Try new code" purposes)</h2>
+<a id="enablingdisabling-try-another-code-feature" class="anchor" href="#enablingdisabling-try-another-code-feature" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enabling/Disabling Try Another Code feature</h2>
 
-<p>To generate a new code, Simply call the <code>run()</code> function.</p>
+<p>Set the <code>allowTryAnotherCode</code> variable to <code>true</code> to enable, <code>false</code> to disable.</p>
+
+<h2>
+<a id="enablingdisabling-case-sensitive-feature" class="anchor" href="#enablingdisabling-case-sensitive-feature" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enabling/Disabling Case Sensitive feature</h2>
+
+<p>Set the <code>caseSensitive</code> variable to <code>true</code> to enable, <code>false</code> to disable.</p>
 
 <h2>
 <a id="modify-code-length" class="anchor" href="#modify-code-length" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modify code length</h2>
 
-<p>To modify the number of characters of the captcha code, simply edit the value of the variable <code>c_myCodeLength</code> to the length you want. The default is 6.</p>
-
-<h1>
-<a id="note" class="anchor" href="#note" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Note:</h1>
-
-<p>This is just purely javascript made as this is a project in one of my subjects in school. Will use jQuery next time.</p>
+<p>To modify the number of characters of the captcha code, simply edit the value of the variable <code>codeLength</code> to the length you want. The default is 5.</p>
 
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
