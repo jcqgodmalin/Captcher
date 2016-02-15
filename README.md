@@ -5,7 +5,7 @@ Simple Captcha Generator and Validator
 Incase you need a simple Captcha Generator, You can use Captcher. Captcher will check if the code entered match or generate a new one if it doesn't.
 
 #Sample
-See the sample [Here](https://rawgit.com/Lezirhc/Captcher/master/Sample/sample.html).
+See the sample [Here](https://rawgit.com/Lezirhc/Captcher/master/vendors/sample.html).
 
 #How to use
 ##Embedding the project:
