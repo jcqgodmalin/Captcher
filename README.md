@@ -19,7 +19,7 @@ Captcha Generator and Validator
         <p id='result-label'></p>
       ```
 
-# Modify code length:
+# Modify code length
 To modify the number of characters of the captcha code, simply edit the value of the variable ```c_myCodeLength``` to the length you want. The default is 6.
 
 # Note:
